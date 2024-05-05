@@ -11,17 +11,26 @@
       height: 360px;
       width: 100%;
       object-fit: cover;
+      margin-bottom:16px;
     }
   </style>
 </head>
 <body>
+  {% include 'nav.html' %}
+  <img id="banner" src="https://c584be48-79b3-4de6-adf5-f19a0abef9ef-00-35nbdr5pj783e.pike.replit.dev/static/career.jpg" alt="career" 
+     class="img-fluid">
   <div class="container">
          <h1 class="text-center mt-2 mb-4"">CareerConnective</h1>
-            <img id="banner" src="https://c584be48-79b3-4de6-adf5-f19a0abef9ef-00-35nbdr5pj783e.pike.replit.dev/static/career.jpg" alt="career" 
-       class="img-fluid">
-        <h2 class="text-center mt-2 mb-4">About CareerConnective</h2>
+    <div class="row" style="margin: 16px;">
+        <div class="col-md-6">
             <p class="lead">Welcome to CareerConnective!At CareerConnective, we believe in the power of connections to transform careers. Our platform is dedicated to bringing together talented individuals and top-tier employers, creating a seamless and efficient process for job seekers and recruiters alike.
           With CareerConnective, you can explore a vast array of job opportunities tailored to your skills, experience, and career aspirations. Whether you're a recent graduate embarking on your professional journey or a seasoned veteran looking for your next challenge, our platform provides the tools and resources you need to succeed.</p>
+        </div>
+            <div class="d-none d-md-block col-6">
+                <img src="/static/people.jpg" alt="people img" style="height:320px; border-radius:4px;">
+            
+            </div>
+      </div>
           <h2 class="text-center mt-2 mb-4">Open Positions </h2>
           <div>
             {% for job in jobs %}
@@ -32,5 +41,6 @@
       <button class="btn btn-primary btn-lg mb-4">Contact us </button>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
