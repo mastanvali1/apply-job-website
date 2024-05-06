@@ -9,6 +9,7 @@ packages = [{include = "repl_nix_apply_job_website"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.0.3"
+pymysql = "^1.1.0"
 
 
 [build-system]
